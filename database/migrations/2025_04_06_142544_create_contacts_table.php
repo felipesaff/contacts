@@ -16,9 +16,10 @@ return new class extends Migration
             $table->id();
             $table->foreignIdFor(User::class);
             $table->string('name');
-            $table->string('contact', 9);
+            $table->string('contact', 9)->unique();
             $table->string('email')->unique();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -18,7 +18,7 @@ class ContactFactory extends Factory
     {
         return [
             'name' => $this->faker->name(),
-            'contact' => $this->faker->phoneNumber(),
+            'contact' => strval(random_int(900000000, 999999999)),
             'email' => $this->faker->email(),
         ];
     }
